@@ -14,7 +14,13 @@ Utilizar funciones flecha, si se considera apropiado. */
 function palabras() {
   var palabras = [];
 
-  document.getElementById(Escribir) = 'Introduce una palabra: ';
+  for (let i = 0; true; i) {
+    palabras.push = prompt('Dame una palabra.');
+
+    if (palabras == '') {
+      break;
+    }
+  }
 }
 /*
 
