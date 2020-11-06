@@ -11,6 +11,11 @@ A continuación se eliminarán todas las palabras repetidas y además se ordenar
 
 Utilizar funciones flecha, si se considera apropiado. */
 
+function palabras() {
+  var palabras = [];
+
+  document.getElementById(Escribir) = 'Introduce una palabra: ';
+}
 /*
 
 Práctica 2 (Obligatoria)
