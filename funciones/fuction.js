@@ -11,16 +11,24 @@ A continuación se eliminarán todas las palabras repetidas y además se ordenar
 
 Utilizar funciones flecha, si se considera apropiado. */
 
-function palabras() {
-  var palabras = [];
+function ejercicio1() {
+    var palabras = new Set();
+    let salida = 1;
+    let sigue = true;
+    let ArrayPalabras = [];
+    for (let i = 0; sigue; i++) {
+        palabras.add(salida = prompt('Dame una palabra.'));
 
-  for (let i = 0; true; i) {
-    palabras.push = prompt('Dame una palabra.');
+        if (salida == '' || salida == null) {
+            ArrayPalabras = Array.from(palabras);
+            ArrayPalabras.sort((a, b) => a.localeCompare(b));
+            ArrayPalabras = ArrayPalabras.reverse();
+            console.log(ArrayPalabras);
+            sigue = false;
+        }
 
-    if (palabras == '') {
-      break;
+
     }
-  }
 }
 /*
 
