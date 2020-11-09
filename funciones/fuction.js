@@ -1,8 +1,4 @@
-/*Prácticas de Funciones
-Las prácticas se entregan indicando en la tarea la URL donde encontrar el desarrollo en GitHub.
-Es obligatorio hacer las prácticas con el entorno de desarrollo que se ha definido al inicio del curso.
-Si en la práctica se pide crear una aplicación web, añadiremos la entrada a la página home de nuestra aplicación (index.html), de tal forma que se pueda navegar desde esta página a cada una de las prácticas que hacemos.
-
+/*
 Práctica 1 (Obligatoria)
 
 Crea una aplicación web que pida al usuario palabras continuamente hasta que que el popup se deje vacío o se cancele.
@@ -15,32 +11,81 @@ function ejercicio1() {
     var palabras = new Set();
     let salida = 1;
     let sigue = true;
-    let ArrayPalabras = [];
+    let arrayPalabras = [];
     for (let i = 0; sigue; i++) {
         palabras.add(salida = prompt('Dame una palabra.'));
 
         if (salida == '' || salida == null) {
-            ArrayPalabras = Array.from(palabras);
-            ArrayPalabras.sort((a, b) => a.localeCompare(b));
-            ArrayPalabras = ArrayPalabras.reverse();
-            console.log(ArrayPalabras);
+            arrayPalabras = Array.from(palabras);
+            arrayPalabras.sort((a, b) => a.localeCompare(b));
+            arrayPalabras = arrayPalabras.reverse();
             sigue = false;
         }
 
 
     }
+
+    document.getElementById('respuesta').innerHTML = arrayPalabras.join("</li><li>");
 }
 /*
 
 Práctica 2 (Obligatoria)
 
 
-Crea una aplicación web que pida al usuario palabras continuamente hasta que que el popup se deje vacío o se cancele.
+Crea una aplicación web que pida al usuario palabras continuamente hasta
+ que que el popup se deje vacío o se cancele.
 
-Crear una función que recibirá todas las palabras y volverá un mapa que contenga como clave cada palabra y el valor será el número de veces que aparece esa palabra en el array. Mostrar resultados por pantalla.
+Crear una función que recibirá todas las palabras y volverá un mapa que
+ contenga como clave cada palabra y el valor será el número de veces que
+  aparece esa palabra en el array. Mostrar resultados por pantalla.
 
-Se valorará positivamente si también se hacen los tests unitarios apropiados de la función que se ha desarrollado mediante Jester.
+Se valorará positivamente si también se hacen los tests unitarios
+ apropiados de la función que se ha desarrollado mediante Jester.
 
+ */
+
+function mapaStrings(nuevoArray) {
+    var mapDeStrings = new Map;
+    let muestra = nuevoArray[0];
+    let contar = 0;
+
+    for (let i = 0; i < nuevoArray.length; i++) {
+
+        if (nuevoArray[i] == muestra) {
+            contar++;
+            mapDeStrings.set(muestra, contar);
+            nuevoArray.splice(i, 1);
+            i--;
+        }
+
+    }
+
+    if (nuevoArray.length > 0) {
+        mapaStrings(nuevoArray);
+    }
+
+}
+
+function ejercicio2() {
+
+    let condi = true;
+    let seguimos;
+    var arrayDeStrings = [];
+    arrayDeStrings
+
+    do {
+        arrayDeStrings.push(seguimos = prompt("Introduce palabras de una en una."));
+        if (seguimos == '' || seguimos == null) {
+            condi = false;
+        }
+    } while (condi);
+
+    mapaStrings(arguments);
+
+
+
+}
+/*
 
 
 Práctica 3 (Opcional)
