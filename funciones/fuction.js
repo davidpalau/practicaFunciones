@@ -44,44 +44,52 @@ Se valorará positivamente si también se hacen los tests unitarios
 
  */
 
-function mapaStrings(nuevoArray) {
-    var mapDeStrings = new Map;
-    let muestra = nuevoArray[0];
-    let contar = 0;
+function mapaStringsFunction(nuevoArray) {
 
-    for (let i = 0; i < nuevoArray.length; i++) {
 
-        if (nuevoArray[i] == muestra) {
-            contar++;
-            mapDeStrings.set(muestra, contar);
-            nuevoArray.splice(i, 1);
-            i--;
+
+    mapDeStrings = new Map;
+
+    do {
+        let contar = 0;
+        var muestra = nuevoArray[0];
+
+        if (nuevoArray.length != 0) {
+            for (let i = 0; i < nuevoArray.length; i++) {
+
+
+                if (nuevoArray[i] == muestra && (nuevoArray[i] != '' || nuevoArray[i] != null)) {
+                    contar++;
+                    mapDeStrings.set(muestra, contar);
+                    nuevoArray.splice(i, 1);
+                    i--;
+                }
+
+            }
+
+            console.log(mapDeStrings);
         }
 
-    }
-
-    if (nuevoArray.length > 0) {
-        mapaStrings(nuevoArray);
-    }
-
+    } while (!(nuevoArray.length == 1));
+    console.log(mapDeStrings);
 }
 
 function ejercicio2() {
 
     let condi = true;
     let seguimos;
-    var arrayDeStrings = [];
-    arrayDeStrings
+    var arrayDeStrings = new Array;
 
     do {
-        arrayDeStrings.push(seguimos = prompt("Introduce palabras de una en una."));
+        seguimos = prompt("Introduce palabras de una en una.");
+        arrayDeStrings.push(seguimos);
+        arrayDeStrings
         if (seguimos == '' || seguimos == null) {
             condi = false;
         }
     } while (condi);
 
-    mapaStrings(arguments);
-
+    mapaStringsFunction(arrayDeStrings);
 
 
 }
