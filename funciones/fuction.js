@@ -12,14 +12,17 @@ A continuación se eliminarán todas las palabras repetidas y además se ordenar
 Utilizar funciones flecha, si se considera apropiado. */
 
 function palabras() {
-  var palabras = [];
+  var palabras = new Set();
 
   for (let i = 0; true; i) {
-    palabras.push = prompt('Dame una palabra.');
+    palabras.add(prompt('Dame una palabra.'));
 
     if (palabras == '') {
       break;
     }
+    let pana = palabras.key;
+    console.log(pana);
+    prompt(pana);
   }
 }
 /*
@@ -33,23 +36,45 @@ Crear una función que recibirá todas las palabras y volverá un mapa que conte
 
 Se valorará positivamente si también se hacen los tests unitarios apropiados de la función que se ha desarrollado mediante Jester.
 
+*/
 
+function mapaFuction() {
+  var mapaString = new Map();
+
+  mapaString.set('David', 3);
+  mapaString.set('Palau', 1);
+  mapaString.set('Morant', 2);
+  mapaString.set('Mañana', 1);
+  mapaString.set('Anna', 3);
+
+  return mapaString;
+}
+
+function ejercicio1() {
+  var mapaStringOtro = new Map();
+
+  mapaStringOtro = mapaFuction();
+
+  console.log(mapaStringOtro);
+}
+
+/*
 
 Práctica 3 (Opcional)
 
 El método filter los arrays permite indicar una función callback, para aplicar un filtro a los elementos del array.
-
 Es una buena práctica para aprender a implementar funciones callback tratar de crear nuestras propias funciones.
-
-Crea una función que se diga filtro y que reciba un array y una función callback. La función callback entenderá que sólo tiene un parámetro. Esta función se aplicará a cada elemento del array y el resultado se volverá a guardar en el mismo array.
-
+Crea una función que se diga filtro y que reciba un array y una función callback.
+ La función callback entenderá que sólo tiene un parámetro. Esta función se aplicará
+ a cada elemento del array y el resultado se volverá a guardar en el mismo array.
 Por ejemplo: Array [1,2,3,4]
-
 función = multiplicar por 2
-
 Resultado: [2, 4, 6, 8]
-
 Crear otros dos casos:
-
 Dado un array de palabras en minúsculas, pasarlo a mayúsculas
 Dado un array de números, calcular el factorial de cada uno (https://es.wikipedia.org/wiki/Factorial) */
+
+function factorial() {}
+function ejercicio3() {
+  const arrayPequeño = [2, 4, 6, 8];
+}
