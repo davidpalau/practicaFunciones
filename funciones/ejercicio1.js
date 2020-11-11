@@ -18,4 +18,6 @@ function ejercicio1() {
 
     document.getElementById('respuesta').innerHTML = arrayPalabras.join("<br>");
     console.log((arrayPalabras));
+
+
 }
