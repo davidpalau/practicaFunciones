@@ -1,6 +1,4 @@
-function mapaStringsFunction(nuevoArray) {
-
-
+var mapaStringsFunction = function(nuevoArray) {
 
     mapDeStrings = new Map;
 
@@ -10,8 +8,6 @@ function mapaStringsFunction(nuevoArray) {
 
         if (nuevoArray.length != 0) {
             for (let i = 0; i < nuevoArray.length; i++) {
-
-
                 if (nuevoArray[i] == muestra && (nuevoArray[i] != '' || nuevoArray[i] != null)) {
                     contar++;
                     mapDeStrings.set(muestra, contar);
