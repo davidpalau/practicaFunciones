@@ -1,8 +1,8 @@
-function Ejercicio1() {
-    const palabras = new Set();
+function ejercicio1() {
+    let palabras = new Set();
     let salida = 1;
     let sigue = true;
-    const arrayPalabras = [];
+    let arrayPalabras = [];
     for (let i = 0; sigue; i++) {
         palabras.add(salida = prompt('Dame una palabra.'));
 
@@ -18,4 +18,6 @@ function Ejercicio1() {
 
     document.getElementById('respuesta').innerHTML = arrayPalabras.join("<br>");
     console.log((arrayPalabras));
+
+
 }
