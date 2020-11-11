@@ -1,5 +1,7 @@
 function mapaStringsFunction(nuevoArray) {
 
+
+
     mapDeStrings = new Map;
 
     do {
@@ -19,26 +21,19 @@ function mapaStringsFunction(nuevoArray) {
 
             }
 
+            console.log(mapDeStrings);
         }
 
     } while (!(nuevoArray.length == 1));
 
-    mapDeStrings.forEach((valor, clave) => {
-        document.write(clave + ' = ' + valor + "<br>");
-        console.log(clave + ' = ' + valor);
-    });
-
-
-
     return mapDeStrings;
 }
 
-function Ejercicio2() {
+function ejercicio2() {
 
     let condi = true;
     let seguimos;
-    const arrayDeStrings = new Array;
-    const mapDeStringsVista = new Map;
+    var arrayDeStrings = new Array;
 
     do {
         seguimos = prompt("Introduce palabras de una en una.");
@@ -49,10 +44,11 @@ function Ejercicio2() {
         }
     } while (condi);
 
-    mapDeStringsVista = mapaStringsFunction(arrayDeStrings);
+    const mapaVista = mapaStringsFunction(arrayDeStrings);
 
-    mapDeStringsVista.forEach((valor, clave) => {
-        document.write(clave + ' = ' + valor + "<br>");
-        console.log(clave + ' = ' + valor);
+    //console.log(mapaVista);
+
+    mapaVista.forEach((clave, valor) => {
+        document.write(clave + ' => ' + valor + "<br>");
     });
 }
