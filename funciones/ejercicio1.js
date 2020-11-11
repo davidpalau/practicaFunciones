@@ -20,8 +20,4 @@ function ejercicio1() {
     console.log((arrayPalabras));
 
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ba4e07e6be5694ab9a8672082d66990e09a0c9c9
