@@ -1,13 +1,4 @@
-/*
-Práctica 1 (Obligatoria)
-
-Crea una aplicación web que pida al usuario palabras continuamente hasta que que el popup se deje vacío o se cancele.
-
-A continuación se eliminarán todas las palabras repetidas y además se ordenarán en español, pero en orden inverso (de la Z a la A) y se mostrará el resultado por pantalla.
-
-Utilizar funciones flecha, si se considera apropiado. */
-
-function ejercicio1() {
+function Ejercicio1() {
     var palabras = new Set();
     let salida = 1;
     let sigue = true;
@@ -27,26 +18,8 @@ function ejercicio1() {
 
     document.getElementById('respuesta').innerHTML = arrayPalabras.join("</li><li>");
 }
-/*
-
-Práctica 2 (Obligatoria)
-
-
-Crea una aplicación web que pida al usuario palabras continuamente hasta
- que que el popup se deje vacío o se cancele.
-
-Crear una función que recibirá todas las palabras y volverá un mapa que
- contenga como clave cada palabra y el valor será el número de veces que
-  aparece esa palabra en el array. Mostrar resultados por pantalla.
-
-Se valorará positivamente si también se hacen los tests unitarios
- apropiados de la función que se ha desarrollado mediante Jester.
-
- */
 
 function mapaStringsFunction(nuevoArray) {
-
-
 
     mapDeStrings = new Map;
 
@@ -67,14 +40,21 @@ function mapaStringsFunction(nuevoArray) {
 
             }
 
-            console.log(mapDeStrings);
         }
 
     } while (!(nuevoArray.length == 1));
-    console.log(mapDeStrings);
+
+    mapDeStrings.forEach(function(valor, clave) {
+        document.write(clave + ' = ' + valor + "<br>");
+        console.log(clave + ' = ' + valor);
+    });
+
+
+
+    return mapDeStrings;
 }
 
-function ejercicio2() {
+function Ejercicio1() {
 
     let condi = true;
     let seguimos;
