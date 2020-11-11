@@ -45,9 +45,15 @@ function ejercicio2() {
     } while (condi);
 
     const mapaVista = mapaStringsFunction(arrayDeStrings);
+<<<<<<< HEAD
 
     //console.log(mapaVista);
 
+=======
+
+    //console.log(mapaVista);
+
+>>>>>>> ba4e07e6be5694ab9a8672082d66990e09a0c9c9
     mapaVista.forEach((clave, valor) => {
         document.write(clave + ' => ' + valor + "<br>");
     });
