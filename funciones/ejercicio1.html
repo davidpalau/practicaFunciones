@@ -1,16 +1,23 @@
-<!DOCTYPE html>
-<html lang="es">
+function ejercicio1() {
+    let palabras = new Set();
+    let salida = 1;
+    let sigue = true;
+    let arrayPalabras = [];
+    for (let i = 0; sigue; i++) {
+        palabras.add(salida = prompt('Dame una palabra.'));
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="ejercicio1.js"></script>
-    <title>Ejericiocio 1</title>
-</head>
+        if (salida == '' || salida == null) {
+            arrayPalabras = Array.from(palabras);
+            arrayPalabras.sort((a, b) => a.localeCompare(b));
+            arrayPalabras = arrayPalabras.reverse();
+            sigue = false;
+        }
 
-<body onload="ejercicio1();">
-    <h1>Ejercicio 1</h1>
 
-</body>
+    }
 
-</html>
+    document.getElementById('respuesta').innerHTML = arrayPalabras.join("<br>");
+    console.log((arrayPalabras));
+
+
+}
